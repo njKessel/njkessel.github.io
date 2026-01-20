@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+
+* {
+    font-family: 'JetBrains Mono', monospace;
+}
+
 body {
     color: white;
     background-color: #000000;
@@ -19,4 +25,20 @@ ul li a {
 
 ul li a:hover {
     background-color: #111111;
+}
+
+.home {
+    background-color: #f370ff;
+    color: black;
+    font-weight: bold;
+}
+
+.home:hover {
+    background-color: #500033;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.push-right {
+    margin-left: auto;
 }
