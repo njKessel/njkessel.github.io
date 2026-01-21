@@ -169,14 +169,22 @@ footer {
 
 .tags {
     display: flex;
-    justify-content: flex-end;
     gap: 15px;
+    
+    margin-left: auto; 
+    justify-content: flex-start; 
+    
+    max-width: 80%;   
+    overflow-x: auto;   
+    white-space: nowrap; 
 }
 
 .tag {
     background-color: #500033;
     font-weight: 700;
     padding: 2px 10px;
+
+    flex-shrink: 0;
 }
 
 .cardbtn-small {
@@ -192,6 +200,7 @@ footer {
     align-items: center;
     
     margin-top: auto;
+    overflow: hidden;
 }
 
 /* FEATURE */
@@ -201,6 +210,17 @@ footer {
     grid-template-columns: 2.5fr 1fr;
     gap: 50px;
     align-items: top;
+}
+
+/* MOBILE LAYOUT (Screens smaller than 768px) */
+@media (max-width: 1050px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        
+        text-align: center;
+        
+        gap: 30px;
+    }
 }
 
 .dropdown {
@@ -245,4 +265,216 @@ footer {
     margin-top: 0;
     padding-bottom: 15px;
     border-bottom: 5px solid #f370ff;
+}
+
+.skills-caroselheader {
+    margin: 2;
+    padding: 0px 10px;
+}
+
+.featskills-caroselheader {
+    margin: 2;
+    padding: 0px 10px;
+    text-align: center;
+}
+
+.programs-grid {
+    scrollbar-width: thin;
+    scrollbar-color: #1c1c1c #000000;
+    transition: scrollbar-color 0.3s;
+
+    margin-inline: 20px;
+    display: flex;
+    gap: 15px;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap; 
+    padding-bottom: 15px;
+}
+
+.program-card {
+    position: relative;
+    padding: 5px;
+    background-color: #111111;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid #f370ff;
+    flex-shrink: 0;
+}
+
+.program-card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.program-card-text {
+    text-decoration: none;
+}
+
+.program-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.feat-skills-cards {
+    width: fit-content;   
+    max-width: 100%;      
+    margin-inline: auto;  
+    
+    display: flex;
+    justify-content: flex-start; 
+    overflow-x: auto;
+    
+    gap: 15px;
+    white-space: nowrap; 
+    padding-top: 5px;
+    padding-bottom: 15px;
+    
+    scrollbar-width: thin;
+    scrollbar-color: #f370ff #000000;
+    transition: scrollbar-color 0.3s;
+}
+
+.feat-skills-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 4px solid #f370ff;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.2s ease;
+    align-items: center;
+}
+
+.feat-skills-content:hover {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border: 4px solid #8400c5;
+    background-color: #0b0010;
+    border-radius: 10px;
+    width: 250px;
+    transition: border 0.2s ease;
+    transform: translateY(-5px);
+    transition: transform 0.2s ease
+}
+
+.feat-skills-content-p {
+    display: flex;
+    flex-direction: column;
+    background-color: #500033;
+    padding: 10px;
+    border: 4px solid #f370ff;
+    border-radius: 10px;
+    width: 250px;
+    transition: transform 0.2s ease;
+    align-items: center;
+}
+
+.feat-skills-content-p:hover {
+    display: flex;
+    flex-direction: column;
+    background-color: #31004a;
+    padding: 10px;
+    border: 4px solid #8400c5;
+    border-radius: 10px;
+    width: 250px;
+    transition: background-color 3s ease, border 0.2s ease;
+    transform: translateY(-5px);
+    transition: transform 0.2s ease
+}
+
+.feat-skills-header {
+    text-align: center;
+    padding-bottom: 4px;
+    margin-bottom: 3px;
+    border-bottom: 2px solid #f370ff;
+}
+
+.skill-icon {
+    font-size: 2rem;
+}
+
+.skill-name {
+    font-size: 2rem;
+}
+
+.skill-details {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.skill-tags {
+    display: flex;
+    gap: 15px;
+
+    overflow-x: auto;   
+    white-space: nowrap; 
+    padding-bottom: 10px;
+    padding-top: 10px;
+    justify-content: flex-start;
+    width: fit-content;
+    max-width: 220px;
+    min-width: 0;
+    margin: 0 auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #f370ff #000000;
+}
+
+.skill-tag {
+    background-color: #111111;
+    font-weight: 900;
+    padding: 2px 10px;
+    border: 2px solid #f370ff;
+    border-radius: 5px;
+    flex-shrink: 0;
+}
+
+.prefer {
+    align-items: top;
+}
+.prefer-heart {
+    color: #f370ff;
+    font-size: 1.2rem;
+}
+
+.pinkdivider {
+    width: 100%;       
+    height: 5px;       
+    background-color: #f370ff;
+    border: none;      
+    margin-top: 10px;  
+    margin-bottom: 0px;
+}
+
+.program-card.future {
+    border-style: dashed;     
+    border-color: #444444;    
+    color: #888888;           
+    opacity: 0.7;            
+    transition: all 0.3s ease;
+}
+
+.program-card.future:hover {
+    opacity: 1;
+    border-color: #f370ff;    
+    color: #ffffff;
+}
+
+.program-card.future .proficiency {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #555555;
+}
+
+.program-card.future:hover .proficiency {
+    color: #f370ff; 
 }
