@@ -79,9 +79,20 @@ footer {
     color: #f370ff;
 }
 .push-right {
+    display: flex;
+    flex-direction: row;
     margin-left: auto;
 }
 
+.rbutton {
+    background-color: #f370ff;
+    color: #000000;
+    font-weight: bold;
+}
+
+.rbutton:hover {
+    color: #f370ff;
+}
 /* PROJECT PAGE */
 
 .project-grid {
@@ -210,17 +221,6 @@ footer {
     grid-template-columns: 2.5fr 1fr;
     gap: 50px;
     align-items: top;
-}
-
-/* MOBILE LAYOUT (Screens smaller than 768px) */
-@media (max-width: 1050px) {
-    .feature-grid {
-        grid-template-columns: 1fr;
-        
-        text-align: center;
-        
-        gap: 30px;
-    }
 }
 
 .dropdown {
@@ -477,4 +477,67 @@ footer {
 
 .program-card.future:hover .proficiency {
     color: #f370ff; 
+}
+
+.contact-social-links {
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+    justify-content: center;
+    padding: 50px;
+}
+
+.contact-social-links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #bbbbbb;  
+    font-size: 1.5rem;  
+    text-decoration: none; 
+    transition: 1s;
+}
+
+.contact-social-links a i {
+    font-size: 5rem;  
+    color: #ffffff;
+}
+
+.contact-social-links a:hover {
+    color: #f370ff;  
+    text-decoration: none; 
+    transform: scale(1.2);
+    transition: 0.2s;
+}
+
+.contact-header {
+    color: #f370ff;  
+    margin-top: 50px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.contact-subheader {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 1050px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        
+        text-align: center;
+        
+        gap: 30px;
+    }
+
+    .contact-social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        justify-content: center;
+        padding: 50px;
+    }
 }

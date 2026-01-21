@@ -1,9 +1,12 @@
+const isInsideProjects = window.location.pathname.includes("/projects/");
+const prefix = isInsideProjects ? "../" : "";
+
 const navbarHTML = `
     <ul>
-        <li><a href="index.html" class="home">NATHANIEL KESSEL</a></li>
+        <li><a href="${prefix}index.html" class="home">NATHANIEL KESSEL</a></li>
         
         <li class="dropdown">
-            <a href="projects.html" class="dropbtn">
+            <a href="${prefix}projects/projects.html" class="dropbtn">
                 PROJECTS
             </a>
 
@@ -14,8 +17,12 @@ const navbarHTML = `
             </div>
         </li>
         
-        <li><a href="skills.html">SKILLS</a></li>
-        <li class="push-right"><a href="contact.html">CONTACT ME</a></li>
+        <li><a href="${prefix}skills.html">SKILLS</a></li>
+        
+        <li class="push-right">
+            <a href="${prefix}contact.html" class="rbutton">CONTACT ME</a>
+            <a href="${prefix}resume.pdf" class="rbutton">RESUME</a>
+        </li>
     </ul>
 `;
 
