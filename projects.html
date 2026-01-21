@@ -1,26 +1,82 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <title>My Projects</title>
+  <head>
+    <title>Projects | Nathaniel Kessel</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   </head>
   <body>
+    
     <div id="nav-placeholder"></div>
-
     <script src="nav.js"></script>
-    <h1> Projects </h1>
-    <p> A detailed list of all of my ongoing, future, and past projects. </p>
-    <table>
-      <tr>
-        <th> Project Name </th>
-        <th> Date </th>
-        <th> Link </th>
-      </tr>
-      <tr>
-        <td> ESP32 Network Clock </td>
-        <td> 2025-09-xx ongoing </td>
-        <td> link placeholder </td>
-      </tr>
-    </table>
+
+    <main class="container">
+      <h1>My Projects</h1>
+      <p>A collection of my embedded systems, PCB designs, and hardware experiments.</p>
+      
+      <div class="project-grid">
+        
+        <div class="project-card">
+          <div class="card-image">
+            <img src="images/clockCardThumb.jpg" alt="ESP32 Clock Prototype">
+            <span class="project-type">Major Personal Project</span>
+          </div>
+          <div class="card-content">
+            <h3>ESP32-S3 Desk Clock</h3>
+            <p>A custom digital clock built on the ESP32-S3 platform.</p>
+            <div class="card-footer">
+              <a href="https://github.com/njKessel/ESP32s3-NetworkClock" target="_blank" class="cardbtn-small"><i class="fab fa-github"></i></a>
+              <div class="tags">
+                <span class="tag">C++</span>
+                <span class="tag">ESP32</span>
+                <span class="tag">I2C</span>
+                <span class="tag">KiCad</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-image">
+            <img src="images/portfolioCardThumb.png" alt="Portfolio Code">
+            <span class="project-type">Personal Project</span>
+          </div>
+          <div class="card-content">
+            <h3>Portfolio Site</h3>
+            <p>This very site designed from scratch via GitHub pages.</p>
+            <div class="card-footer">
+              <a href="https://github.com/njKessel/njkessel.github.io" target="_blank" class="cardbtn-small"><i class="fab fa-github"></i></a>
+              <div class="tags">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="card-image">
+            <img src="images/valconvCardThumb.jpg" alt="TI84 CE Python Value Converter">
+            <span class="project-type">Minor Personal Project</span>
+          </div>
+          <div class="card-content">
+            <h3>TI84 Numeric Base Converter</h3>
+            <p>A program for changing between decimal, binary, octal, and hex representations of integers.</p>
+            <div class="card-footer">
+              <a href="https://github.com/njKessel/CEPython-ValueConverter" target="_blank" class="cardbtn-small"><i class="fab fa-github"></i></a>
+              <div class="tags">
+                <span class="tag">Python</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="footer.js"></script>
+    
   </body>
 </html>
