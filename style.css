@@ -203,6 +203,13 @@ footer {
     padding: 2px 10px;
     text-decoration: none;
     font-size: 1.5rem;
+
+    transition: color 0.5s;
+}
+
+.cardbtn-small:hover {
+    color: #ffffff;
+    transition: color 0.5s;
 }
 
 .card-footer {

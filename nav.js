@@ -21,7 +21,7 @@ const navbarHTML = `
         
         <li class="push-right">
             <a href="${prefix}contact.html" class="rbutton">CONTACT ME</a>
-            <a href="${prefix}resume.pdf" class="rbutton">RESUME</a>
+            <a href="${prefix}NathanielKesselResumeFALL2026_v12.pdf" class="rbutton" target="_blank">RESUME</a>
         </li>
     </ul>
 `;
