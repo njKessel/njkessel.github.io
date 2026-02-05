@@ -12,8 +12,6 @@ const navbarHTML = `
 
             <div class="dropdown-content">
                 <a href="${prefix}projects/clock.html">ESP32 DESK CLOCK</a>
-                <a href="${prefix}projects/portfolio.html">PORTFOLIO SITE</a>
-                <a href="${prefix}projects/baseconv.html">TI84 BASE CONVERTER</a>
             </div>
         </li>
         
@@ -27,3 +25,6 @@ const navbarHTML = `
 `;
 
 document.getElementById("nav-placeholder").innerHTML = navbarHTML;
+
+// <a href="${prefix}projects/portfolio.html">PORTFOLIO SITE</a>
+// <a href="${prefix}projects/baseconv.html">TI84 BASE CONVERTER</a>
