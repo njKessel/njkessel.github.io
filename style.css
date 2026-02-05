@@ -531,24 +531,6 @@ footer {
     justify-content: center;
 }
 
-@media (max-width: 1050px) {
-    .feature-grid {
-        grid-template-columns: 1fr;
-        
-        text-align: center;
-        
-        gap: 30px;
-    }
-
-    .contact-social-links {
-        display: flex;
-        flex-direction: row;
-        gap: 60px;
-        justify-content: center;
-        padding: 50px;
-    }
-}
-
 .clockpage-header {
     text-align: center;
     position: relative;
@@ -601,12 +583,20 @@ footer {
 }
 
 .projectpage-toptext {
-    padding: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
     font-size: large;
 }
 
 .componenttable {
-    padding: 50px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    justify-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:20px;
 }
 
 .componenttable th {
@@ -618,7 +608,129 @@ footer {
 }
 
 .componenttable td {
-    min-width: 500px;
+    padding: 5px;
     border-left: solid;
+}
+
+.componenttable td:last-child {
+    padding: 5px;
     border-right: solid;
+}
+
+.qty {
+    text-align: center;
+    min-width: none;
+}
+
+.component {
+    min-width: 500px;
+}
+
+.componenttable tr:last-child td {
+    border-bottom: solid white;
+}
+
+.project-contentheader {
+    position: relative;
+    font-weight: 900;
+    margin-top: 0px;
+    padding-left: 10px;
+    background-color: #500033;
+    border-bottom: solid #f370ff;
+    margin-bottom: 0;
+}
+
+.project-contentheader::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background: linear-gradient(90deg, rgba(90, 0, 57, 0),rgba(90, 0, 57, 0), rgba(243, 112, 255, 0.867));
+
+    z-index: 2;
+}
+
+.inline-projectcontent {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: start;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.inline-projectcontent img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.inlineimg {
+    background-color: white;
+    position: relative; 
+    width: 100%;
+    min-height: 300px; 
+    overflow: hidden; 
+    border-left: #f370ff solid 5px;
+}
+
+.inlineimg::after {
+    content: " ";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 2;
+}
+
+.project-inlinetext {
+    margin-left: 10px;
+}
+
+@media (max-width: 1050px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+        
+        text-align: center;
+        
+        gap: 30px;
+    }
+
+    .contact-social-links {
+        display: flex;
+        flex-direction: row;
+        gap: 60px;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    .clockpage-headertext {
+    position: absolute;
+    color: white;
+
+    top: 85%;
+    right: 2%;
+
+    font-size: 50px;
+    font-weight: 900;
+    z-index: 2;
+    }
+
+    .clockpage-headertext p{
+    position: absolute;
+    color: #f370ff;
+
+    top: -50%;
+    right: 0%;
+
+    font-size: 20px;
+    font-weight: 900;
+    z-index: 2;
+    }
 }

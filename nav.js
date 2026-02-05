@@ -11,7 +11,7 @@ const navbarHTML = `
             </a>
 
             <div class="dropdown-content">
-                <a href="#">ESP32 DESK CLOCK</a>
+                <a href="${prefix}projects/clock.html">ESP32 DESK CLOCK</a>
                 <a href="#">PORTFOLIO SITE</a>
                 <a href="#">TI84 BASE CONVERTER</a>
             </div>

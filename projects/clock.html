@@ -21,7 +21,7 @@
     <p class="projectpage-toptext">My ESP32 Network Clock project is my first major self-directed computer engineering project. This project gave me the drive to accelerate learning in my major and learn many skills that allowed me to find my path in the field. It led me through PCB design, hardware design, embedded systems, programming with C++, and most of all how to stay motivated.</p>
     <p class="projectpage-toptext">The clock is a 12 character alphanumeric display with shift-register based driver logic designed by me. It uses an ESP32-S3 and the Arduino framework. </p>
 
-    <h2>PARTS AND COMPONENTS</h2>
+    <h1 class="project-contentheader">PARTS AND COMPONENTS</h1>
     <div class="componenttable">
         <table>
             <tr>
@@ -31,32 +31,52 @@
             </tr>
             <tr>
                 <td>MICROCONTROLLER</td>
-                <td>Espressif SystemsESP32-S3-DevkitC-2</td>
-                <td>1</td>
+                <td class="component">Espressif SystemsESP32-S3-DevkitC-2</td>
+                <td class="qty">1</td>
             </tr>
             <tr>
                 <td>ROTARY ENCODER</td>
-                <td>PEC11-R</td>
-                <td>1</td>
+                <td class="component">PEC11-R</td>
+                <td class="qty">1</td>
             </tr>
             <tr>
                 <td>BUTTON</td>
-                <td>SIMPLE CLICK BUTTON</td>
-                <td>2</td>
+                <td class="component">SIMPLE CLICK BUTTON</td>
+                <td class="qty">2</td>
             </tr>
             <tr>
                 <td>DISPLAY MODULE</td>
-                <td>Lite On LTP-587HR</td>
-                <td>12</td>
+                <td class="component">Lite On LTP-587HR</td>
+                <td class="qty">12</td>
             </tr>
             <tr>
                 <td>SHIFT REGISTER</td>
-                <td>Texas Instruments 75HC595</td>
-                <td>5</td>
+                <td class="component">Texas Instruments 75HC595</td>
+                <td class="qty">5</td>
             </tr>
         </table>
     </div>
-
+    <h1 class="project-contentheader">12C-LTP-587HR rev 1 & 2</h1>
+    <div class="inline-projectcontent">
+        <div class="project-inlinetext">
+            <p>For my project I needed a PCB for the display modules. The Lite On LTP-587HR did not fit on a traditional breadboard in the correct orientation and wiring was confusing enough to warrent me learning KiCad, which has become one of my favorite softwares to use. This started with the 12C-LTP-587HR board pictured in its second revision on the right.</p>
+            <p>This was the first PCB I ever designed and I am rather proud of it. The first revision was a learning experience where I did not understand how DIP module pin numbers work, and I incorrectly guessed the location of the pins on the PCB. Luckily I was able to spin up a second revision quickly that resulted in a fully functional board.</p>
+            <p>Many images of the project at this stage show the shift registers rubber-banded to the board. This is due to the sockets I chose allowing the shift registers to come out of their slots over time, as is fixed with the parts used in revision 3.</p>
+        </div>
+        <div class="inlineimg">
+            <img src="../images/clockPCBrev1and2.jpg" alt="the first PCB revisions">
+        </div>
+    </div>
+    <h1 class="project-contentheader">12C-LTP-587HR rev 3</h1>
+    <div class="inline-projectcontent">
+        <div class="project-inlinetext">
+            <p>The third revision of the board resolves two major problems with the previous revision. First, the display modules themselves are moved much closer together for improved legibility. This was paired with my improved understanding of footprints in KiCad. Secondly, transistor arrays are used to improve stability and brightness in the display segments, utilizing ESP32 safe 3.3v logic to drive 5v to the display. A larger header is also used for these new pins, and one additional transistor is used for the decimal point.</p>
+            <p>This board will also incorperate the improved sockets to prevent needing to rubber band the board together.</p>
+        </div>
+        <div class="inlineimg">
+            <img src="../images/clockPCBrev3.jpg" alt="the third PCB revision">
+        </div>
+    </div>
     <div id="footer-placeholder"></div>
     <script src="../footer.js"></script>
 </body>
