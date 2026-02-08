@@ -660,25 +660,75 @@ footer {
     gap: 50px;
     align-items: start;
     margin-bottom: 0;
-    align-items: center;
 }
 
 .inline-projectcontent img {
     width: 100%;
-    height: 300px;
+    height: auto;
     object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    border: #8400c5 solid 5px;
 }
 
 .inlineimg {
-    background-color: white;
+    display: flex;
     position: relative; 
     width: 100%;
-    min-height: 300px; 
+    max-height: 300px;
     overflow: hidden; 
-    border-left: #f370ff solid 5px;
 }
 
-.inlineimg::after {
+.inline-projectcontentfull {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.inline-projectcontentfull img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin: 10px;
+    border-radius: 5px;
+    border: #8400c5 solid 5px;
+}
+
+
+.inlineimgfull {
+    display: flex;
+    position: relative; 
+    width: 100%;
+    overflow: hidden; 
+}
+
+.project-inlinetext {
+    margin-left: 10px;
+}
+
+.headerbtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    z-index: 1;
+
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    font-weight: 900;
+    background-color: #31004a;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px;
+
+    overflow: hidden;
+}
+
+.headerbtn::after {
     content: " ";
     position: absolute;
     height: 100%;
@@ -686,14 +736,19 @@ footer {
     top: 0;
     left: 0;
 
-    z-index: 2;
+    background: linear-gradient(130deg, rgba(90, 0, 57, 0),rgba(90, 0, 57, 0), rgba(243, 112, 255, 0.867));
+    border-radius: inherit;
+
+    z-index: -1;
+
+    pointer-events: none;
 }
 
-.project-inlinetext {
-    margin-left: 10px;
+.headerbtn:hover {
+    color: #f370ff;
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1200px) {
     .feature-grid {
         grid-template-columns: 1fr;
         
@@ -733,4 +788,156 @@ footer {
     font-weight: 900;
     z-index: 2;
     }
+
+    .inline-projectcontent {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        display: flex;     
+        flex-direction: column;
+    }
+
+    .inline-projectcontentfull {
+        grid-template-columns: 1fr; 
+        gap: 30px;
+        display: flex;     
+        flex-direction: column;
+    }
+
+    .inlineimg {
+        width: 100%;
+        min-height: 0;  
+        height: auto;   
+        border-left: none;
+    }
+
+    .inline-projectcontent img {
+        width: 100%;
+        height: auto;   
+        max-height: 300px; 
+        object-fit: cover;
+    }
+    
+    .project-inlinetext {
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .componenttable {
+        font-size: x-small;
+        border-collapse: collapse;
+        border-spacing: 0;
+        justify-items: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom:20px;
+    }
+
+    .componenttable th {
+        border-bottom: solid white;
+        text-align: left;
+        font-size: larger;
+        color: #f370ff;
+    }
+
+    .componenttable td {
+        padding: 5px;
+        border-left: solid;
+    }
+
+    .componenttable td:last-child {
+        padding: 5px;
+        border-right: solid;
+    }
+
+    .component {
+        min-width: 100px;
+    }
+
+    .project-contentheader {
+        position: relative;
+        font-size: x-large;
+        font-weight: 900;
+        margin-top: 0px;
+        padding-left: 10px;
+        background-color: #500033;
+        border-bottom: solid #f370ff;
+        margin-bottom: 0;
+    }
+
+    .feat-skills-content,
+    .feat-skills-content-p {
+        width: 180px;     
+        min-width: 180px; 
+        padding: 8px;
+    }
+
+    .skill-icon, 
+    .skill-name {
+        font-size: 1.4rem;  
+    }
+
+    .skill-details span {
+        font-size: 0.8rem;
+    }
+
+    .prefer-heart {
+        font-size: 0.9rem;
+    }
+
+    .skill-tag {
+        padding: 2px 6px;
+        font-size: 0.7rem;
+    }
+    .skill-tags {
+        display: flex;
+        gap: 15px;
+
+        overflow-x: auto;   
+        white-space: nowrap; 
+        padding-bottom: 10px;
+        padding-top: 10px;
+        justify-content: flex-start;
+        width: fit-content;
+        max-width: 150px;
+        min-width: 0;
+        margin: 0 auto;
+
+        scrollbar-width: thin;
+        scrollbar-color: #f370ff #000000;
+    }
+
+    .programs-grid {
+        gap: 10px;    
+        margin-inline: 10px;
+    }
+
+    .program-card {
+        width: 110px;       
+        padding: 8px 4px;   
+        border-width: 2px;  
+    }
+
+    .program-card-text {
+        font-size: 0.8rem;
+        display: flex;
+        flex-direction: column; 
+        gap: 5px;
+    }
+
+    .program-card-text i {
+        font-size: 1.5rem; 
+    }
+
+    .proficiency {
+        font-size: 0.6rem; 
+        letter-spacing: 1px; 
+        margin-top: 5px;
+    }
+
+    .skills-caroselheader, 
+    .featskills-caroselheader {
+        font-size: 1.5rem;
+        margin-top: 30px;
+    }
+
 }

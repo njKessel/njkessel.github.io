@@ -17,57 +17,119 @@
         <span class="clockpage-headertext">ESP32 NETWORK CLOCK
             <p> EMBEDDED SYSTEMS | PCB DESIGN | ESP32 | C++</p>
         </span>
+        <a href="https://github.com/njKessel/ESP32s3-NetworkClock" target="_blank" class="headerbtn"><i class="fab fa-github"></i> GITHUB</a>
     </div>
     <p class="projectpage-toptext">My ESP32 Network Clock project is my first major self-directed computer engineering project. This project gave me the drive to accelerate learning in my major and learn many skills that allowed me to find my path in the field. It led me through PCB design, hardware design, embedded systems, programming with C++, and most of all how to stay motivated.</p>
     <p class="projectpage-toptext">The clock is a 12 character alphanumeric display with shift-register based driver logic designed by me. It uses an ESP32-S3 and the Arduino framework. </p>
 
-    <h1 class="project-contentheader">PARTS AND COMPONENTS</h1>
-    <div class="componenttable">
-        <table>
-            <tr>
-                <th>TYPE</th>
-                <th>COMPONENT</th>
-                <th>QUANTITY</th>
-            </tr>
-            <tr>
-                <td>MICROCONTROLLER</td>
-                <td class="component">Espressif SystemsESP32-S3-DevkitC-2</td>
-                <td class="qty">1</td>
-            </tr>
-            <tr>
-                <td>ROTARY ENCODER</td>
-                <td class="component">PEC11-R</td>
-                <td class="qty">1</td>
-            </tr>
-            <tr>
-                <td>BUTTON</td>
-                <td class="component">SIMPLE CLICK BUTTON</td>
-                <td class="qty">2</td>
-            </tr>
-            <tr>
-                <td>DISPLAY MODULE</td>
-                <td class="component">Lite On LTP-587HR</td>
-                <td class="qty">12</td>
-            </tr>
-            <tr>
-                <td>SHIFT REGISTER</td>
-                <td class="component">Texas Instruments 75HC595</td>
-                <td class="qty">5</td>
-            </tr>
-        </table>
+    <h1 class="project-contentheader">BILL OF MATERIALS</h1>
+    <div class="inline-projectcontentfull">
+        <div class="componenttable">
+            <table>
+                <tr>
+                    <th>TYPE</th>
+                    <th>COMPONENT</th>
+                    <th>QUANTITY</th>
+                </tr>
+                <tr>
+                    <td>MICROCONTROLLER</td>
+                    <td class="component">Espressif ESP32-S3-DevKitC-1</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>SHIFT REGISTER</td>
+                    <td class="component">Texas Instruments 74HC595</td>
+                    <td class="qty">5</td>
+                </tr>
+                
+                <tr>
+                    <td>SOURCE DRIVER</td>
+                    <td class="component">Toshiba TBD62783AFG</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>SINK DRIVER</td>
+                    <td class="component">Toshiba TBD62083AFG</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>MOSFET</td>
+                    <td class="component">2N7002 (N-Channel)</td>
+                    <td class="qty">1</td>
+                </tr>
+
+                <tr>
+                    <td>DISPLAY MODULE</td>
+                    <td class="component">Lite-On LTP-587HR (16-Seg)</td>
+                    <td class="qty">12</td>
+                </tr>
+                <tr>
+                    <td>ROTARY ENCODER</td>
+                    <td class="component">Bourns PEC11-R</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>BUTTON</td>
+                    <td class="component">6x6mm Tactile Switch</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>STATUS LED</td>
+                    <td class="component">Kingbright WP113IDT (Red)</td>
+                    <td class="qty">3</td>
+                </tr>
+
+                <tr>
+                    <td>LIGHT SENSOR</td>
+                    <td class="component">Vishay TEPT5700 (Phototransistor)</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>CONNECTOR</td>
+                    <td class="component">JST-XH 9-Pin Header (Vertical)</td>
+                    <td class="qty">1</td>
+                </tr>
+
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">100Ω (0805 SMD)</td>
+                    <td class="qty">17</td>
+                </tr>
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">1kΩ (0603 SMD)</td>
+                    <td class="qty">3</td>
+                </tr>
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">10kΩ (0603 SMD)</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>CAPACITOR</td>
+                    <td class="component">100nF Ceramic (0603 SMD)</td>
+                    <td class="qty">6</td>
+                </tr>
+            </table>
+            <p>Schematic for just the display and display driver logic.</p>
+        </div>
+        <div class="inlineimgfull">
+            <img src="../images/clockSchema2026-08-02.png" alt="clock display schematic">
+        </div>
     </div>
-    <h1 class="project-contentheader">12C-LTP-587HR rev 1 & 2</h1>
+    <h1 class="project-contentheader">DISPLAY PCB 12C-LTP-587HR REVISION 1 & 2</h1>
     <div class="inline-projectcontent">
         <div class="project-inlinetext">
-            <p>For my project I needed a PCB for the display modules. The Lite On LTP-587HR did not fit on a traditional breadboard in the correct orientation and wiring was confusing enough to warrent me learning KiCad, which has become one of my favorite softwares to use. This started with the 12C-LTP-587HR board pictured in its second revision on the right.</p>
-            <p>This was the first PCB I ever designed and I am rather proud of it. The first revision was a learning experience where I did not understand how DIP module pin numbers work, and I incorrectly guessed the location of the pins on the PCB. Luckily I was able to spin up a second revision quickly that resulted in a fully functional board.</p>
+            <p>For my project I needed a PCB for the display modules. The Lite On LTP-587HR did not fit on a traditional breadboard in the correct orientation and wiring was confusing enough to warrant me learning KiCad, which has become one of my favorite softwares to use. This started with the 12C-LTP-587HR board pictured in its second revision on the right.</p>
+            <p>This was the first PCB I ever designed and I am rather proud of it. The first revision was a learning experience where I did not understand how DIP module pin numbers work, and I incorrectly guessed the location of the pins on the PCB. Luckily, I was able to spin up a second revision quickly that resulted in a fully functional board.</p>
             <p>Many images of the project at this stage show the shift registers rubber-banded to the board. This is due to the sockets I chose allowing the shift registers to come out of their slots over time, as is fixed with the parts used in revision 3.</p>
         </div>
         <div class="inlineimg">
             <img src="../images/clockPCBrev1and2.jpg" alt="the first PCB revisions">
         </div>
     </div>
-    <h1 class="project-contentheader">12C-LTP-587HR rev 3</h1>
+
+    <h1 class="project-contentheader">DISPLAY PCB 12C-LTP-587HR REVISION 3</h1>
     <div class="inline-projectcontent">
         <div class="project-inlinetext">
             <p>The third revision of the board resolves two major problems with the previous revision. First, the display modules themselves are moved much closer together for improved legibility. This was paired with my improved understanding of footprints in KiCad. Secondly, transistor arrays are used to improve stability and brightness in the display segments, utilizing ESP32 safe 3.3v logic to drive 5v to the display. A larger header is also used for these new pins, and one additional transistor is used for the decimal point.</p>
@@ -76,6 +138,13 @@
         <div class="inlineimg">
             <img src="../images/clockPCBrev3.jpg" alt="the third PCB revision">
         </div>
+    </div>
+
+    <h1 class="project-contentheader">DESIGN CHOICES</h1>
+    <div class="project-inlinetext">
+        <p>This project originated from a desire to build a minimalist desk clock that didn't sacrifice functionality. My goal was to create a fully standalone device, avoiding the complexity of external apps or web portals by implementing comprehensive on-device controls.</p>
+        <p>The design evolved from simple Arduino LCD kits and off-the-shelf I2C modules to a fully custom driver implementation. I chose to design my own discrete driver logic for two reasons: educational value given through a deeper understanding of shift registers and multiplexing logic, as well as control over digit spacing, form factor, and brightness properties.</p>
+        <p>During the testing of the second revision, I found notable brightness inconsistencies when driving the LEDs directly from shift registers. To solve this, I redesigned the architecture to include TBD62783 (Source) and TBD62083 (Sink) drivers. This upheld the ESP32's logic levels and allowed stable 5V for consistent brightness. </p>
     </div>
     <div id="footer-placeholder"></div>
     <script src="../footer.js"></script>
