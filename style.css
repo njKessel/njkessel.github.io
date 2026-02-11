@@ -65,6 +65,20 @@ footer {
     border-top: 1px solid #444444;
 }
 
+.intro-text {
+    font-size: larger;
+    line-height: 1.8rem;
+    text-align: justify;
+}
+
+.intro-detail {
+    font-size: medium;
+    color: #cccccc;
+    padding-left: 15px;
+    width: 97%;
+    text-align: justify;
+}
+
 .social-links {
     margin-top: 10px;
 }
@@ -121,6 +135,7 @@ footer {
 .project-card:hover .project-type {
     background-color: #f370ff;
 }
+
 .project-type {
     position: absolute;
     top: 0 px;
@@ -773,7 +788,72 @@ footer {
     list-style: none;
 }
 
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); 
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.gallery-card {
+    background-color: #111111;
+    border: 3px solid #500033; 
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease;
+    cursor: default;
+}
+
+.gallery-card:hover {
+    border-color: #f370ff; 
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(243, 112, 255, 0.15);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-bottom: 2px solid #500033;
+}
+
+.gallery-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    padding: 12px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: #cccccc;
+    background-color: #0b0b0b;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+
+.gallery-card:hover .gallery-caption {
+    color: #f370ff;
+}
+
 @media (max-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+
     .navbar {
         flex-direction: column;
         align-items: flex-start;
