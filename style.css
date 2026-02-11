@@ -2,6 +2,7 @@
 
 * {
     font-family: 'JetBrains Mono', monospace;
+    box-sizing: border-box; 
 }
 
 body {
@@ -748,7 +749,118 @@ footer {
     color: #f370ff;
 }
 
+.navbar .icon {
+    display: none;
+}
+
+.navbar .nav-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;     
+    margin: 0;
+    padding: 0;
+}
+
+.push-right {
+    margin-left: auto;  
+    display: flex;      
+}
+
+.nav-brand {
+    flex-shrink: 0;     
+    margin-right: 20px;
+    list-style: none;
+}
+
 @media (max-width: 1200px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        position: relative;
+        
+        background-color: #000000; 
+        border-bottom: 3px solid #f370ff;
+        min-height: 60px;
+    }
+
+    .navbar .home {
+        background-color: transparent !important; 
+        color: #f370ff !important; 
+        font-size: 1.3rem;
+        padding: 15px 20px; 
+        width: auto; 
+    }
+
+    .navbar .home:hover {
+        color: #ffffff !important;
+        background-color: transparent !important;
+    }
+
+    .navbar .icon {
+        display: block;
+        position: absolute;
+        
+        right: 15px;
+        height: 60px; 
+        line-height: 60px; 
+        
+        color: #f370ff; 
+        font-size: 1.8rem;
+        cursor: pointer;
+        padding: 0px 15px;
+        transition: color 0.3s;
+        text-decoration: none;
+    }
+
+    .navbar .icon:hover {
+        color: white;
+    }
+    .navbar .hidable {
+        display: none;
+        width: 100%;
+        text-align: left;
+        background-color: #111111; 
+        border-top: 1px solid #222; 
+    }
+    
+    .navbar.responsive .hidable {
+        display: flex;
+    }
+
+    .navbar li a {
+        display: block;
+        padding: 15px 20px;
+        color: #cccccc;
+        text-decoration: none;
+    }
+
+    .navbar li a:hover {
+        color: #f370ff;
+        background-color: #000000;
+        padding-left: 25px; 
+        transition: 0.2s;
+    }
+
+    .navbar.responsive .push-right {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .navbar.responsive .rbutton {
+        background-color: transparent;
+        color: #f370ff;
+        border-left: 5px solid #f370ff; 
+        font-weight: bold;
+    }
+    
+    .navbar.responsive .rbutton:hover {
+        background-color: #f370ff;
+        color: black;
+    }
+
     .feature-grid {
         grid-template-columns: 1fr;
         
@@ -766,27 +878,27 @@ footer {
     }
 
     .clockpage-headertext {
-    position: absolute;
-    color: white;
+        position: absolute;
+        color: white;
 
-    top: 85%;
-    right: 2%;
+        top: 85%;
+        right: 2%;
 
-    font-size: 50px;
-    font-weight: 900;
-    z-index: 2;
+        font-size: 50px;
+        font-weight: 900;
+        z-index: 2;
     }
 
     .clockpage-headertext p{
-    position: absolute;
-    color: #f370ff;
+        position: absolute;
+        color: #f370ff;
 
-    top: -50%;
-    right: 0%;
+        top: -50%;
+        right: 0%;
 
-    font-size: 20px;
-    font-weight: 900;
-    z-index: 2;
+        font-size: 20px;
+        font-weight: 900;
+        z-index: 2;
     }
 
     .inline-projectcontent {
@@ -940,4 +1052,35 @@ footer {
         margin-top: 30px;
     }
 
+    .navbar .nav-items {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar.responsive .nav-items {
+        display: flex;
+    }
+
+    .navbar li {
+        width: 100%;
+        text-align: left;
+    }
+
+    .push-right {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: relative; 
+        width: 100%;
+        box-shadow: none;
+        background-color: #222;
+    }
 }
