@@ -17,7 +17,7 @@ const navbarHTML = `
             
             <li class="push-right">
                 <a href="${prefix}contact.html" class="rbutton">CONTACT ME</a>
-                <a href="${prefix}NathanielKesselResumeFALL2026_v12.1A.pdf" class="rbutton" target="_blank">RESUME</a>
+                <a href="${prefix}NathanielKesselResumeFALL2026_v12.1A.pdf" class="resume" target="_blank">RESUME</a>
             </li>
         </div>
 
@@ -29,7 +29,6 @@ const navbarHTML = `
 
 document.getElementById("nav-placeholder").innerHTML = navbarHTML;
 
-// Function to toggle the mobile menu
 function toggleMobileMenu() {
     var x = document.getElementById("myNavbar");
     if (x.className === "navbar") {

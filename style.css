@@ -28,6 +28,7 @@ ul {
     padding: 0;
     background-color: #333333;
     display: flex;
+    border-bottom: #f370ff solid;
 } 
 
 ul li a {
@@ -478,6 +479,16 @@ footer {
     margin-bottom: 0px;
 }
 
+.gallery-img img, 
+.card-image img {
+    filter: grayscale(30%) contrast(1.1) saturate(0.8);
+}
+
+.gallery-card:hover .gallery-img img,
+.project-card:hover .card-image img {
+    filter: none;
+}
+
 .program-card.future {
     border-style: dashed;     
     border-color: #444444;    
@@ -852,6 +863,12 @@ footer {
     }
 }
 
+.resume {
+    background: white;
+    color: black;
+    font-weight: 900;
+}
+
 @media (max-width: 1200px) {
 
     .navbar {
@@ -1162,5 +1179,10 @@ footer {
         width: 100%;
         box-shadow: none;
         background-color: #222;
+    }
+
+    .resume {
+        background: #31004a;
+        font-weight: 900;
     }
 }
