@@ -868,8 +868,32 @@ footer {
     color: black;
     font-weight: 900;
 }
+@media (max-width: 1300px) {
+        .clockpage-headertext {
+        position: absolute;
+        color: white;
 
-@media (max-width: 1200px) {
+        top: 85%;
+        right: 2%;
+
+        font-size: 50px;
+        font-weight: 900;
+        z-index: 2;
+    }
+
+    .clockpage-headertext p{
+        position: absolute;
+        color: #f370ff;
+
+        top: -50%;
+        right: 0%;
+
+        font-size: 20px;
+        font-weight: 900;
+        z-index: 2;
+    }
+}
+@media (max-width: 1000px) {
 
     .navbar {
         flex-direction: column;
@@ -972,30 +996,6 @@ footer {
         gap: 60px;
         justify-content: center;
         padding: 50px;
-    }
-
-    .clockpage-headertext {
-        position: absolute;
-        color: white;
-
-        top: 85%;
-        right: 2%;
-
-        font-size: 50px;
-        font-weight: 900;
-        z-index: 2;
-    }
-
-    .clockpage-headertext p{
-        position: absolute;
-        color: #f370ff;
-
-        top: -50%;
-        right: 0%;
-
-        font-size: 20px;
-        font-weight: 900;
-        z-index: 2;
     }
 
     .inline-projectcontent {
