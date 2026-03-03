@@ -869,11 +869,12 @@ footer {
     font-weight: 900;
 }
 @media (max-width: 1300px) {
-        .clockpage-headertext {
+
+    .clockpage-headertext {
         position: absolute;
         color: white;
 
-        top: 85%;
+        top: 60%;
         right: 2%;
 
         font-size: 50px;
