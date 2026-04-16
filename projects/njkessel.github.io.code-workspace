@@ -1,8 +1,5 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {}
+    "settings": {
+        "stm32cube-ide-clangd.path": "cube"
+    }
 }

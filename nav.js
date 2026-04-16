@@ -10,6 +10,8 @@ const navbarHTML = `
                 <a href="${prefix}projects/projects.html" class="dropbtn">PROJECTS</a>
                 <div class="dropdown-content">
                     <a href="${prefix}projects/clock.html">ESP32 DESK CLOCK</a>
+                    <a href="${prefix}projects/linuxServer.html">HEADLESS LAPTOP SERVER</a>
+                    <a href="${prefix}projects/smallprojects.html">SMALL/LEGACY PROJECTS</a>
                 </div>
             </li>
             
@@ -17,7 +19,7 @@ const navbarHTML = `
             
             <li class="push-right">
                 <a href="${prefix}contact.html" class="rbutton">CONTACT ME</a>
-                <a href="${prefix}NathanielKesselResumeFALL2026_v12.1A.pdf" class="resume" target="_blank">RESUME</a>
+                <a href="${prefix}Resume.pdf" class="resume" target="_blank">RESUME</a>
             </li>
         </div>
 

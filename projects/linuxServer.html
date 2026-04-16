@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESP32 CLOCK | Nathaniel Kessel</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+
+    <script src="../nav.js"></script>
+
+    <div class="clockpage-header">
+        <img src="../images/linuxserver.jpg" alt="ESP32 Clock Prototype">
+        <span class="clockpage-headertext">LINUX SERVER
+            <p> ARCH LINUX | 3D PRINTING | FUSION360 </p>
+        </span>
+        <!--<a href="https://github.com/njKessel/ESP32s3-NetworkClock" target="_blank" class="headerbtn"><i class="fab fa-github"></i> GITHUB</a>-->
+    </div>
+    <p class="projectpage-toptext">This project began from an interest in working with X86 Linux systems to build my system administration skills. Due to hardware price increases from AI datacenter applications and other political pressure, building my own ATX system was off the table. I turned to my high school laptop, an Acer Travelmate P, to transform into a non-destructive (would be able to put back together as a laptop) headless 1U rack-mountable server.</p>
+    <p class="projectpage-toptext">This has also given me a reason to build my CAD skills designing a fully custom case for the motherboard and drive bays. Current challenges include getting the BIOS on the laptop motherboard, which is designed for school system administration and is relatively limited in its capabilities to play nicely with full 3.5" enterprise HDDs. </p>
+
+    <!--<h1 class="project-contentheader">BILL OF MATERIALS</h1>
+    <div class="inline-projectcontentfull">
+        <div class="componenttable">
+            <table>
+                <tr>
+                    <th>TYPE</th>
+                    <th>COMPONENT</th>
+                    <th>QUANTITY</th>
+                </tr>
+                <tr>
+                    <td>MICROCONTROLLER</td>
+                    <td class="component">Espressif ESP32-S3-DevKitC-1</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>SHIFT REGISTER</td>
+                    <td class="component">Texas Instruments 74HC595</td>
+                    <td class="qty">5</td>
+                </tr>
+                
+                <tr>
+                    <td>SOURCE DRIVER</td>
+                    <td class="component">Toshiba TBD62783AFG</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>SINK DRIVER</td>
+                    <td class="component">Toshiba TBD62083AFG</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>MOSFET</td>
+                    <td class="component">2N7002 (N-Channel)</td>
+                    <td class="qty">1</td>
+                </tr>
+
+                <tr>
+                    <td>DISPLAY MODULE</td>
+                    <td class="component">Lite-On LTP-587HR (16-Seg)</td>
+                    <td class="qty">12</td>
+                </tr>
+                <tr>
+                    <td>ROTARY ENCODER</td>
+                    <td class="component">Bourns PEC11-R</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>BUTTON</td>
+                    <td class="component">6x6mm Tactile Switch</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>STATUS LED</td>
+                    <td class="component">Kingbright WP113IDT (Red)</td>
+                    <td class="qty">3</td>
+                </tr>
+
+                <tr>
+                    <td>LIGHT SENSOR</td>
+                    <td class="component">Vishay TEPT5700 (Phototransistor)</td>
+                    <td class="qty">1</td>
+                </tr>
+                <tr>
+                    <td>CONNECTOR</td>
+                    <td class="component">JST-XH 9-Pin Header (Vertical)</td>
+                    <td class="qty">1</td>
+                </tr>
+
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">100Ω (0805 SMD)</td>
+                    <td class="qty">17</td>
+                </tr>
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">1kΩ (0603 SMD)</td>
+                    <td class="qty">3</td>
+                </tr>
+                <tr>
+                    <td>RESISTOR</td>
+                    <td class="component">10kΩ (0603 SMD)</td>
+                    <td class="qty">2</td>
+                </tr>
+                <tr>
+                    <td>CAPACITOR</td>
+                    <td class="component">100nF Ceramic (0603 SMD)</td>
+                    <td class="qty">6</td>
+                </tr>
+            </table>
+            <p>Schematic for just the display and display driver logic.</p>
+        </div>
+        <div class="inlineimgfull">
+            <img src="../images/clockSchema2026-08-02.png" alt="clock display schematic">
+        </div>
+    </div>-->
+
+    <h1 class="project-contentheader">PROJECT GALLERY</h1>
+    <div class="gallery-grid">
+        <div class="gallery-card">
+            <div class="gallery-img">
+                <img src="../images/linuxserver.jpg" alt="Open top case with internals">
+            </div>
+            <div class="gallery-caption">
+                FULL WIDTH PROTOTYPE CASE
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-img">
+                <img src="../images/travelmatePserver.jpg" alt="Open top case with internals">
+            </div>
+            <div class="gallery-caption">
+                PROTOTYPE WITH DRIVE BAY
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-img">
+                <img src="../images/serverFusionModel.png" alt="Model in fusion">
+            </div>
+            <div class="gallery-caption">
+                ISOMETRIC CAD RENDER
+            </div>
+        </div>
+
+        <div class="gallery-card">
+            <div class="gallery-img">
+                <img src="../images/serverTopDown.png" alt="Fusion top down shot">
+            </div>
+            <div class="gallery-caption">
+                TOP-DOWN CAD RENDER
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+    <script src="../footer.js"></script>
+</body>
+</html>
