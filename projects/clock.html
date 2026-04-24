@@ -147,6 +147,20 @@
         <p>During the testing of the second revision, I found notable brightness inconsistencies when driving the LEDs directly from shift registers. To solve this, I redesigned the architecture to include TBD62783 (Source) and TBD62083 (Sink) drivers. This upheld the ESP32's logic levels and allowed stable 5V for consistent brightness. </p>
     </div>
 
+    <h1 class="project-contentheader">BRIGHTNESS IMPLEMENTATION</h1>
+    <div class="inline-projectcontent">
+        <div class="project-inlinetext">
+            <p>The brightness system uses a TEPT5700 ambient light sensor, chosen for its photopic spectral sensitivity that closely matches human light perception. The software implementation utilizes a constrain-and-map pipeline: the 12-bit ADC signal is clamped to a safety range to prevent unreadable extremes and then mapped to an 8-bit PWM value. This output drives the Output Enable (OE) pins of the shift registers, providing flicker-free, real-time brightness scaling.</p>
+
+            <p>Future development will replace the fixed linear mapping with a tunable perception curve. This update will introduce user-adjustable high and low brightness "stops" and selectable gamma correction (logarithmic or exponential). By allowing the ramp and clamping points to be adjusted via the navigation pad, the display can be calibrated to specific environments to better account for the non-linear nature of human light perception.</p>
+
+            <p>The following embedded video illustrates the automatic scaling of the display's PWM duty cycle in response to varying ambient light levels detected by the TEPT5700 sensor. The video also features the manual brightness override menu, which allows for a fixed intensity selection via the rotary encoder. This manual mode bypasses the sensor logic, with the software state machine ensuring the user-defined brightness level is maintained across different UI states.</p>
+        </div>
+        <div class="inlineimg">
+            <iframe style="width: 100%; aspect-ratio: 16 / 9;" src="https://www.youtube-nocookie.com/embed/JaFwxX6OlVQ?si=wEW8_O5UR45yBciD&rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <h1 class="project-contentheader">PROJECT GALLERY</h1>
     <div class="gallery-grid">
         <div class="gallery-card">
