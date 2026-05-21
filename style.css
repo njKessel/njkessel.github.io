@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
 
 /* COLORS */
 :root { 
@@ -6,8 +7,12 @@
     --primaryDark: #500033;
     --bg: #000000;
     --fg: #2b001b;
+    --text-main: #ffffff;
+    --text-sub: #aaaaaa;
+    --text-muted: #666666;
 }
 
+/* GENERAL */
 * {
     font-family: 'JetBrains Mono', monospace;
     box-sizing: border-box; 
@@ -17,8 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    color: white;
-    background-color: var(--bg);
+    color: var(--text-main);
+    background: linear-gradient(0deg,rgba(0, 0, 0, 1) 62%, rgb(26, 15, 31) 100%);
     margin: 0;
     padding: 0;
 }
@@ -30,6 +35,7 @@ body {
     padding: 20px 0;
 }
 
+/* HEADER */
 ul {
     list-style-type: none;
     margin: 0;
@@ -37,13 +43,15 @@ ul {
     background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgb(45, 25, 52) 50%);
     display: flex;
     border-bottom: #f370ff solid;
+    border-bottom: 2px solid var(--primary);
 } 
 
 ul li a {
-    display: block;
+    display: flex;
     color: white;
     padding: 14px 16px;
     text-decoration: none;
+    height: 100%;
 }
 
 ul li a:hover {
@@ -51,6 +59,7 @@ ul li a:hover {
 }
 
 .home {
+    font-family: 'Orbitron', sans-serif;
     background-color: var(--primary);
     color: black;
     font-weight: 900;
@@ -72,6 +81,34 @@ ul li a:hover {
     color: #ffffff;
 }
 
+.resume {
+    color: var(--primary);
+    font-weight: 900;
+
+    animation: neon-pulse 5s infinite ease-in-out;
+}
+
+.resume:hover {
+    background-color: var(--primary);
+    color: var(--text-main);
+}
+
+@keyframes neon-pulse {
+    0% {
+        text-shadow: 0 0 4px var(--primaryDark), 
+                     0 0 10px var(--primaryDark);
+    }
+    50% {
+        text-shadow: 0 0 8px var(--primary), 
+                     0 0 20px var(--primary), 
+                     0 0 30px var(--primary);
+    }
+    100% {
+        text-shadow: 0 0 4px var(--primaryDark), 
+                     0 0 10px var(--primaryDark);
+    }
+}
+
 #footer-placeholder {
     margin-top: auto;
 }
@@ -87,15 +124,15 @@ footer {
 .intro-text {
     font-size: larger;
     line-height: 1.8rem;
-    text-align: justify;
+    text-align: left;
 }
 
 .intro-detail {
     font-size: medium;
-    color: #cccccc;
-    padding-left: 15px;
+    color: var(--text-sub);
+    padding-left: 5px;
     width: 97%;
-    text-align: justify;
+    text-align: left;
 }
 
 .social-links {
@@ -289,12 +326,12 @@ footer {
 .feature-title {
     color: #f370ff;
     font-weight: 900;
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
 }
 
 .feature-subheading {
-    text-align: center;
+    text-align: left;
     margin-top: 0;
     padding-bottom: 15px;
     border-bottom: 5px solid #f370ff;
@@ -872,11 +909,6 @@ footer {
     }
 }
 
-.resume {
-    background: white;
-    color: black;
-    font-weight: 900;
-}
 @media (max-width: 1300px) {
 
     .clockpage-headertext {
