@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap');
 
+/* COLORS */
+:root { 
+    --primary: #f370ff;
+    --primaryDark: #500033;
+    --bg: #000000;
+    --fg: #2b001b;
+}
+
 * {
     font-family: 'JetBrains Mono', monospace;
     box-sizing: border-box; 
@@ -10,7 +18,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: white;
-    background-color: #000000;
+    background-color: var(--bg);
     margin: 0;
     padding: 0;
 }
@@ -26,7 +34,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background-color: #333333;
+    background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgb(45, 25, 52) 50%);
     display: flex;
     border-bottom: #f370ff solid;
 } 
@@ -39,19 +47,29 @@ ul li a {
 }
 
 ul li a:hover {
-    background-color: #111111;
+    background-color: var(--primary);
 }
 
 .home {
-    background-color: #f370ff;
+    background-color: var(--primary);
     color: black;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 .home:hover {
-    background-color: #500033;
+    background-color: var(--bg);
+    color: white;
+    font-weight: 900;
+}
+
+.rbutton {
     color: #ffffff;
     font-weight: bold;
+}
+
+.rbutton:hover {
+    background-color: var(--primary);
+    color: #ffffff;
 }
 
 #footer-placeholder {
@@ -100,15 +118,6 @@ footer {
     margin-left: auto;
 }
 
-.rbutton {
-    background-color: #f370ff;
-    color: #000000;
-    font-weight: bold;
-}
-
-.rbutton:hover {
-    color: #f370ff;
-}
 /* PROJECT PAGE */
 
 .project-grid {
