@@ -17,6 +17,8 @@ const navbarHTML = `
             
             <li><a href="${prefix}skills.html">SKILLS</a></li>
             
+            <li><a href="${prefix}background.html">BACKGROUND</a></li>
+
             <li class="push-right">
                 <a href="${prefix}contact.html" class="rbutton">CONTACT ME</a>
                 <a href="${prefix}Resume.pdf" class="resume" target="_blank">RESUME</a>

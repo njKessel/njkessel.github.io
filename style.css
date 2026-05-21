@@ -53,12 +53,15 @@ body {
     padding: 20px 0;
 }
 
+html {
+    background-color: var(--bg); 
+}
 /* HEADER */
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background: linear-gradient(145deg,rgba(--g-black-rgba) 0%, rgba(--g-accent-rgba) 50%);
+    background: linear-gradient(145deg,rgba(var(--g-black-rgba)) 0%, rgba(var(--g-accent-rgba)) 50%);
     display: flex;
     border-bottom: var(--primary) solid;
     border-bottom: 2px solid var(--primary);
