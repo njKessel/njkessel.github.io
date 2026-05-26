@@ -7,29 +7,23 @@
     --primary-muted: #a64baf;
     --primaryDark: #431e46;
     --bg: #000000;
-    --fg: #2b001b;
+    --fg: #22002b;
     --text-main: #ffffff;
     --text-sub: #aaaaaa;
     --text-muted: #666666;
     --text-lightbackground: #000000;
 
-    --g-black-rgba: 0, 0, 0, 1;
-    --g-verydark-rgba: 26, 15, 31, 1;
-    --g-accent-rgba: 45, 25, 52, 1;
+    --body-background: linear-gradient(0deg,rgba(0, 0, 0, 1) 62%, rgba(26, 15, 31, 1) 100%);
+    --header-background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgba(45, 25, 52, 1) 50%);
+    --card-background: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgba(59, 0, 50, 1) 100%);
+    --card-background-hover: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgba(59, 0, 50, 1) 40%);
+    --card-image: linear-gradient(45deg, rgba(80, 0, 51, 0.068), rgba(243, 112, 255, 0.2));
+    --dark-img: linear-gradient(180deg, rgba(255, 0, 162, 0.068), rgba(0, 0, 0, 0.867));
 
     --footer-background: #111111;
 
 }
 
-/* GRADIENT EXAMPLES
-
-BODY BACKGROUND 
-linear-gradient(0deg,rgba(var(--g-black-rgba)) 62%, rgba(var(--g-verydark-rgba)) 100%)
-
-HEADER BACKGROUND
-linear-gradient(145deg,rgba(--g-black-rgba) 0%, rgba(--g-accent-rgba) 50%)
-
-*/
 /* GENERAL */
 * {
     font-family: 'JetBrains Mono', monospace;
@@ -41,7 +35,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     color: var(--text-main);
-    background: linear-gradient(0deg,rgba(var(--g-black-rgba)) 62%, rgba(var(--g-verydark-rgba)) 100%);
+    background: var(--body-background);
     margin: 0;
     padding: 0;
 }
@@ -61,7 +55,7 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    background: linear-gradient(145deg,rgba(var(--g-black-rgba)) 0%, rgba(var(--g-accent-rgba)) 50%);
+    background: var(--header-background);
     display: flex;
     border-bottom: var(--primary) solid;
     border-bottom: 2px solid var(--primary);
@@ -161,7 +155,7 @@ footer {
 }
 
 .social-links a:hover {
-    color: #f370ff;
+    color: var(--primary);
 }
 
 hr {
@@ -197,8 +191,8 @@ hr {
 }
 
 .project-card {
-    background: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgba(59, 0, 50, 1) 100%);
-    border: 5px solid #500033;
+    background: var(--card-background);
+    border: 5px solid var(--primaryDark);
     overflow: hidden;
     transition: transform 0.2s ease, border-color 0.2s ease;
 
@@ -207,13 +201,13 @@ hr {
 }
 
 .project-card:hover {
-    background: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgba(59, 0, 50, 1) 40%);
+    background: var(--card-background-hover);
     transform: translateY(-5px);
-    border-color: #f370ff;
+    border-color: var(--primary);
 }   
 
 .project-card:hover .project-type {
-    background-color: #f370ff;
+    background-color: var(--primary);
 }
 
 .project-type {
@@ -221,7 +215,7 @@ hr {
     top: 0 px;
     right: 00px;
 
-    background-color: #500033;
+    background-color: var(--primaryDark);
     color: #ffffff;
     padding: 4px 8px;
     font-size: 1rem;
@@ -254,7 +248,7 @@ hr {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(45deg, rgba(80, 0, 51, 0.068), rgba(243, 112, 255, 0.2));
+    background: var(--card-image);
 
     pointer-events: none;
 }
@@ -271,7 +265,7 @@ hr {
 .card-content h3 {
     margin-top: 0;
     margin-bottom: 0;
-    color: #f370ff;
+    color: var(--primary);
 }
 
 .tags {
@@ -305,7 +299,7 @@ hr {
 }
 
 .cardbtn-small:hover {
-    color: #ffffff;
+    color: var(--text-main);
     transition: color 0.5s;
 }
 
@@ -335,22 +329,22 @@ hr {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #222222;
+    background-color: var(--primaryDark);
     min-width: 200px;
     z-index: 1000;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
 }
 
 .dropdown-content a {
-    color: white;
+    color: var(--text-main);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: #111111;
-    color: #f370ff;
+    background-color: var(--fg);
+    color: var(--primary);
 }
 
 .dropdown:hover .dropdown-content {
@@ -358,7 +352,7 @@ hr {
 }
 
 .feature-title {
-    color: #f370ff;
+    color: var(--primary);
     font-weight: 900;
     text-align: left;
     margin-bottom: 0;
@@ -368,7 +362,7 @@ hr {
     text-align: left;
     margin-top: 0;
     padding-bottom: 15px;
-    border-bottom: 5px solid #f370ff;
+    border-bottom: 5px solid var(--primary);
 }
 
 .skills-caroselheader {
@@ -383,7 +377,7 @@ hr {
 }
 .programs-grid {
     scrollbar-width: thin;
-    scrollbar-color: #1c1c1c #000000;
+    scrollbar-color: var(--fg) var(--bg);
     transition: scrollbar-color 0.3s;
 
     margin-inline: 20px;
@@ -398,11 +392,11 @@ hr {
 .program-card {
     position: relative;
     padding: 5px;
-    background-color: #111111;
+    background-color: var(--bg);
     width: 150px;
     text-align: center;
     border-radius: 5px; 
-    border: 2px solid #f370ff;
+    border: 2px solid var(--primary);
     flex-shrink: 0;
 }
 
@@ -439,7 +433,7 @@ hr {
     padding-bottom: 15px;
     
     scrollbar-width: thin;
-    scrollbar-color: #f370ff #000000;
+    scrollbar-color: var(--primary) var(--bg);
     transition: scrollbar-color 0.3s;
 }
 
@@ -447,7 +441,7 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 4px solid #f370ff;
+    border: 4px solid var(--primary);
     border-radius: 10px;
     width: 250px;
     transition: transform 0.2s ease;
@@ -458,8 +452,8 @@ hr {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    border: 4px solid #8400c5;
-    background-color: #0b0010;
+    border: 4px solid var(--primary-muted);
+    background-color: var(--fg);
     border-radius: 10px;
     width: 250px;
     transition: border 0.2s ease;
@@ -470,9 +464,9 @@ hr {
 .feat-skills-content-p {
     display: flex;
     flex-direction: column;
-    background-color: #500033;
+    background-color: var(--primaryDark);
     padding: 10px;
-    border: 4px solid #f370ff;
+    border: 4px solid var(--primary);
     border-radius: 10px;
     width: 250px;
     transition: transform 0.2s ease;
@@ -482,9 +476,9 @@ hr {
 .feat-skills-content-p:hover {
     display: flex;
     flex-direction: column;
-    background-color: #31004a;
+    background-color: var(--bg);
     padding: 10px;
-    border: 4px solid #8400c5;
+    border: 4px solid var(--primaryDark);
     border-radius: 10px;
     width: 250px;
     transition: background-color 3s ease, border 0.2s ease;
@@ -529,14 +523,14 @@ hr {
     margin: 0 auto;
 
     scrollbar-width: thin;
-    scrollbar-color: #f370ff #000000;
+    scrollbar-color: var(--primary) var(--bg);
 }
 
 .skill-tag {
-    background-color: #111111;
+    background-color: var(--fg);
     font-weight: 900;
     padding: 2px 10px;
-    border: 2px solid #f370ff;
+    border: 2px solid var(--primary);
     border-radius: 5px;
     flex-shrink: 0;
 }
@@ -545,14 +539,14 @@ hr {
     align-items: top;
 }
 .prefer-heart {
-    color: #f370ff;
+    color: var(--primary);
     font-size: 1.2rem;
 }
 
 .pinkdivider {
     width: 100%;       
     height: 5px;       
-    background-color: #f370ff;
+    background-color: var(--primary);
     border: none;      
     margin-top: 10px;  
     margin-bottom: 0px;
@@ -570,26 +564,26 @@ hr {
 
 .program-card.future {
     border-style: dashed;     
-    border-color: #444444;    
-    color: #888888;           
+    border-color: var(--text-muted);    
+    color: var(--text-sub);           
     opacity: 0.7;            
     transition: all 0.3s ease;
 }
 
 .program-card.future:hover {
     opacity: 1;
-    border-color: #f370ff;    
-    color: #ffffff;
+    border-color: var(--primary);    
+    color: var(--text-main);
 }
 
 .program-card.future .proficiency {
     font-size: 0.7rem;
     letter-spacing: 2px;
-    color: #555555;
+    color: var(--text-muted);
 }
 
 .program-card.future:hover .proficiency {
-    color: #f370ff; 
+    color: var(--primary); 
 }
 
 .contact-social-links {
@@ -604,7 +598,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #bbbbbb;  
+    color: var(--text-sub);  
     font-size: 1.5rem;  
     text-decoration: none; 
     transition: 1s;
@@ -612,18 +606,18 @@ hr {
 
 .contact-social-links a i {
     font-size: 5rem;  
-    color: #ffffff;
+    color: var(--text-main);
 }
 
 .contact-social-links a:hover {
-    color: #f370ff;  
+    color: var(--primary);  
     text-decoration: none; 
     transform: scale(1.2);
     transition: 0.2s;
 }
 
 .contact-header {
-    color: #f370ff;  
+    color: var(--primary);  
     margin-top: 50px;
     margin-bottom: 0px;
     display: flex;
@@ -641,7 +635,7 @@ hr {
     text-align: center;
     position: relative;
     height: 40vh;
-    border-bottom: 5px solid #f370ff;
+    border-bottom: 5px solid var(--primary);
 }
 
 .clockpage-header img {
@@ -659,7 +653,7 @@ hr {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(180deg, rgba(255, 0, 162, 0.068), rgba(0, 0, 0, 0.867));
+    background: var(--dark-img);
 
     pointer-events: none;
 }
@@ -667,7 +661,7 @@ hr {
 .clockpage-headertext {
     font-family: 'Orbitron', sans-serif;
     position: absolute;
-    color: white;
+    color: var(--text-main);
 
     top: 75%;
     right: 2%;
@@ -679,7 +673,7 @@ hr {
 
 .clockpage-headertext p{
     position: absolute;
-    color: #f370ff;
+    color: var(--primary);
 
     top: -30%;
     right: 0%;
@@ -716,7 +710,7 @@ table {
     border-bottom: solid var(--primaryDark);
     text-align: left;
     font-size: larger;
-    color: #f370ff;
+    color: var(--primary);
     font-weight: 700;
 }
 
@@ -751,7 +745,7 @@ table {
     padding-left: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
-    background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgb(45, 25, 52) 50%);
+    background: var(--header-background);
     border-bottom: 3px solid var(--primaryDark);
     margin-bottom: 0;
 }
@@ -771,7 +765,7 @@ table {
     object-fit: cover;
     margin: 10px;
     border-radius: 5px;
-    border: #8400c5 solid 5px;
+    border: var(--primaryDark) solid 5px;
 }
 
 .inlineimg {
@@ -797,7 +791,7 @@ table {
     object-fit: cover;
     margin: 10px;
     border-radius: 5px;
-    border: #8400c5 solid 5px;
+    border: var(--primaryDark) solid 5px;
 }
 
 
@@ -819,10 +813,10 @@ table {
     z-index: 1;
 
     font-size: 30px;
-    color: white;
+    color: var(--text-main);
     text-decoration: none;
     font-weight: 900;
-    background-color: #31004a;
+    background-color: var(--primaryDark);
     padding: 5px;
     padding-left: 10px;
     padding-right: 10px;
@@ -848,7 +842,7 @@ table {
 }
 
 .headerbtn:hover {
-    color: #f370ff;
+    color: var(--primary);
 }
 
 .navbar .icon {
@@ -884,8 +878,8 @@ table {
 }
 
 .gallery-card {
-    background-color: #111111;
-    border: 3px solid #500033; 
+    background-color: var(--bg);
+    border: 3px solid var(--primaryDark); 
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease;
@@ -893,7 +887,7 @@ table {
 }
 
 .gallery-card:hover {
-    border-color: #f370ff; 
+    border-color: var(--primary); 
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(243, 112, 255, 0.15);
 }
@@ -902,7 +896,7 @@ table {
     width: 100%;
     height: 220px;
     overflow: hidden;
-    border-bottom: 2px solid #500033;
+    border-bottom: 2px solid var(--primaryDark);
 }
 
 .gallery-img img {
@@ -921,15 +915,15 @@ table {
     text-align: center;
     font-weight: 700;
     font-size: 0.9rem;
-    color: #cccccc;
-    background-color: #0b0b0b;
+    color: var(--text-sub);
+    background-color: var(--bg);
     text-transform: uppercase;
     letter-spacing: 1px;
     transition: color 0.2s;
 }
 
 .gallery-card:hover .gallery-caption {
-    color: #f370ff;
+    color: var(--primary);
 }
 
 @media (max-width: 1200px) {
@@ -943,7 +937,7 @@ table {
 
     .clockpage-headertext {
         position: absolute;
-        color: white;
+        color: var(--text-main);
 
         top: 60%;
         right: 2%;
@@ -955,7 +949,7 @@ table {
 
     .clockpage-headertext p{
         position: absolute;
-        color: #f370ff;
+        color: var(--primary);
 
         top: -50%;
         right: 0%;
@@ -973,21 +967,21 @@ table {
         padding: 0;
         position: relative;
         
-        background-color: #000000; 
-        border-bottom: 3px solid #f370ff;
+        background-color: var(--bg); 
+        border-bottom: 3px solid var(--primary);
         min-height: 60px;
     }
 
     .navbar .home {
         background-color: transparent !important; 
-        color: #f370ff !important; 
+        color: var(--primary) !important; 
         font-size: 1.3rem;
         padding: 15px 20px; 
         width: auto; 
     }
 
     .navbar .home:hover {
-        color: #ffffff !important;
+        color: var(--text-main) !important;
         background-color: transparent !important;
     }
 
@@ -999,7 +993,7 @@ table {
         height: 60px; 
         line-height: 60px; 
         
-        color: #f370ff; 
+        color: var(--primary); 
         font-size: 1.8rem;
         cursor: pointer;
         padding: 0px 15px;
@@ -1008,14 +1002,14 @@ table {
     }
 
     .navbar .icon:hover {
-        color: white;
+        color: var(--text-main);
     }
     .navbar .hidable {
         display: none;
         width: 100%;
         text-align: left;
-        background-color: #111111; 
-        border-top: 1px solid #222; 
+        background-color: var(--bg); 
+        border-top: 1px solid var(--footer-background); 
     }
     
     .navbar.responsive .hidable {
@@ -1025,13 +1019,13 @@ table {
     .navbar li a {
         display: block;
         padding: 15px 20px;
-        color: #cccccc;
+        color: var(--text-sub);
         text-decoration: none;
     }
 
     .navbar li a:hover {
-        color: #f370ff;
-        background-color: #000000;
+        color: var(--primary);
+        background-color: var(--bg);
         padding-left: 25px; 
         transition: 0.2s;
     }
@@ -1044,14 +1038,14 @@ table {
     
     .navbar.responsive .rbutton {
         background-color: transparent;
-        color: #f370ff;
-        border-left: 5px solid #f370ff; 
+        color: var(--primary);
+        border-left: 5px solid var(--primary); 
         font-weight: bold;
     }
     
     .navbar.responsive .rbutton:hover {
-        background-color: #f370ff;
-        color: black;
+        background-color: var(--primary);
+        color: var(--bg);
     }
 
     .feature-grid {
@@ -1114,10 +1108,10 @@ table {
     }
 
     .componenttable th {
-        border-bottom: solid white;
+        border-bottom: solid var(--text-main);
         text-align: left;
         font-size: larger;
-        color: #f370ff;
+        color: var(--primary);
     }
 
     .componenttable td {
@@ -1140,8 +1134,8 @@ table {
         font-weight: 900;
         margin-top: 0px;
         padding-left: 10px;
-        background-color: #500033;
-        border-bottom: solid #f370ff;
+        background-color: var(--primaryDark);
+        border-bottom: solid var(--primary);
         margin-bottom: 0;
     }
 
@@ -1184,7 +1178,7 @@ table {
         margin: 0 auto;
 
         scrollbar-width: thin;
-        scrollbar-color: #f370ff #000000;
+        scrollbar-color: var(--primary) var(--bg);
     }
 
     .programs-grid {
@@ -1250,11 +1244,11 @@ table {
         position: relative; 
         width: 100%;
         box-shadow: none;
-        background-color: #222;
+        background-color: var(--primaryDark);
     }
 
     .resume {
-        background: #31004a;
+        background: var(--primaryDark);
         font-weight: 900;
     }
 }
