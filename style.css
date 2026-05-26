@@ -3,6 +3,7 @@
 
 /* COLORS */
 :root { 
+    /*
     --primary: #f370ff;
     --primary-muted: #a64baf;
     --primaryDark: #431e46;
@@ -21,7 +22,25 @@
     --dark-img: linear-gradient(180deg, rgba(255, 0, 162, 0.068), rgba(0, 0, 0, 0.867));
 
     --footer-background: #111111;
+    */
+    --primary: #ff7070;
+    --primary-muted: #af4b4b;
+    --primaryDark: #461e1e;
+    --bg: #000000;
+    --fg: #2b0000;
+    --text-main: #ffffff;
+    --text-sub: #aaaaaa;
+    --text-muted: #666666;
+    --text-lightbackground: #000000;
 
+    --body-background: linear-gradient(0deg,rgba(0, 0, 0, 1) 62%, rgb(31, 15, 15) 100%);
+    --header-background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgb(52, 25, 25) 50%);
+    --card-background: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgb(59, 0, 0) 100%);
+    --card-background-hover: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgb(59, 0, 0) 40%);
+    --card-image: linear-gradient(45deg, rgba(80, 0, 0, 0.068), rgba(255, 112, 112, 0.2));
+    --dark-img: linear-gradient(180deg, rgba(255, 0, 0, 0.068), rgba(0, 0, 0, 0.867));
+
+    --footer-background: #111111;
 }
 
 /* GENERAL */
@@ -216,7 +235,7 @@ hr {
     right: 00px;
 
     background-color: var(--primaryDark);
-    color: #ffffff;
+    color: var(--text-main);
     padding: 4px 8px;
     font-size: 1rem;
     font-weight: 900;
@@ -290,7 +309,7 @@ hr {
 }
 
 .cardbtn-small {
-    color: #f370ff;
+    color: var(--primary);
     padding: 2px 10px;
     text-decoration: none;
     font-size: 1.5rem;
