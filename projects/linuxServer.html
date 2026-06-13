@@ -118,6 +118,20 @@
         </div>
     </div>-->
 
+    <h1 class="project-contentheader">BUCK-BOOST POWER SUPPLY</h1>
+    <div class="inline-projectcontent">
+        <div class="project-inlinetext">
+            <p>To overcome the strict power limitations of the repurposed laptop motherboard, a custom multi-stage switch-mode power supply (SMPS) was required to drive the 3.5" enterprise HDDs. Because the proprietary board lacked a native 12V rail, this power distribution network was designed to step down the primary 19.5V input into stable 12V, 5V, and 3.3V rails.</p>
+
+            <p>The power delivery system was fully designed and validated using LTspice. The simulation utilizes three cascaded buck converters operating at a ~300kHz switching frequency. By calculating precise inductor values and specifying discrete MOSFETs and Schottky diodes, the transient analysis proves that all three voltage rails successfully stabilize within 2 milliseconds.</p>
+
+            <p>While the physical PCB has not yet been spun, this comprehensive simulation serves as a critical proof-of-concept. It validates the component selection, transient response, and voltage ripple management required to finalize the analog hardware for the 1U server build.</p>
+        </div>
+        <div class="inlineimg">
+            <img src="../images/linuxServerPowerSupply.png" alt="LTspice simulation of the power supply">
+        </div>
+    </div>
+
     <h1 class="project-contentheader">PROJECT GALLERY</h1>
     <div class="gallery-grid">
         <div class="gallery-card">
