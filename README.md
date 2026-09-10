@@ -1,7 +1,7 @@
 # Welcome
 
 Welcome to my portfolio site. Please view the site below to see my projects, background, experience, and what I can do for you as a co-op.
-(nathanielkessel.com)[www.nathanielkessel.com]
+[nathanielkessel.com](www.nathanielkessel.com)
 
 I am a 3rd-year Computer Engineering student at the University of Cincinnati focused on the intersection of digital logic and physical hardware. My primary focus includes PCB Design, Embedded Systems, and Audio Electronics. I am currently seeking Fall 2026 Co-op positions where I can contribute to robust hardware and firmware projects.
 

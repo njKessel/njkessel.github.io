@@ -10,6 +10,7 @@ const navbarHTML = `
                 <a href="${prefix}projects/projects.html" class="dropbtn">PROJECTS</a>
                 <div class="dropdown-content">
                     <a href="${prefix}projects/clock.html">ESP32 DESK CLOCK</a>
+                    <a href="${prefix}projects/messenger.html>MESSENGER APP</a>
                     <a href="${prefix}projects/linuxServer.html">HEADLESS LAPTOP SERVER</a>
                     <a href="${prefix}projects/smallprojects.html">SMALL/LEGACY PROJECTS</a>
                 </div>

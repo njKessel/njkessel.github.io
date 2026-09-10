@@ -703,8 +703,21 @@ hr {
 }
 
 .projectpage-toptext {
-    padding-top: 10px;
+    padding-top: 0px;
     padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    font-size: large;
+}
+
+.projectpage-intro-miniheader {
+    padding-left: 10px;
+    color: var(--primary)
+}
+
+.projectpage-toptext-indent {
+    padding-top: 0px;
+    padding-left: 30px;
     padding-right: 10px;
     padding-bottom: 0px;
     font-size: large;
@@ -795,6 +808,13 @@ table {
     overflow: hidden; 
 }
 
+.inlineimgfull {
+    display: flex;
+    position: relative; 
+    width: 100%;
+    overflow: hidden; 
+}
+
 .inline-projectcontentfull {
     margin-top: 0;
     display: grid;
@@ -813,15 +833,7 @@ table {
     border: var(--primaryDark) solid 5px;
 }
 
-
-.inlineimgfull {
-    display: flex;
-    position: relative; 
-    width: 100%;
-    overflow: hidden; 
-}
-
-.project-inlinetext {
+.project-inlinetext-full {
     margin-left: 10px;
 }
 
