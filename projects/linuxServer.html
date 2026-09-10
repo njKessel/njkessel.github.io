@@ -15,15 +15,18 @@
     <div class="clockpage-header">
         <img src="../images/linuxserver.jpg" alt="ESP32 Clock Prototype">
         <span class="clockpage-headertext">LINUX SERVER
-            <p> ARCH LINUX | 3D PRINTING | FUSION360 </p>
+            <p> DEBIAN LINUX | 3D PRINTING | FUSION360 </p>
         </span>
         <!--<a href="https://github.com/njKessel/ESP32s3-NetworkClock" target="_blank" class="headerbtn"><i class="fab fa-github"></i> GITHUB</a>-->
     </div>
-    <p class="projectpage-toptext">This project began from an interest in working with X86 Linux systems to build my system administration skills. Due to hardware price increases from AI datacenter applications, building my own ATX system was off the table. I turned to my high school laptop, an Acer Travelmate P, to transform into a non-destructive (would be able to put back together as a laptop) headless 1U rack-mountable server.</p>
-    <p class="projectpage-toptext">This has also given me a reason to build my CAD skills designing a fully custom case for the motherboard and drive bays. Current challenges include getting the BIOS on the laptop motherboard, which is designed for school system administration and is relatively limited in its capabilities to play nicely with full 3.5" enterprise HDDs. </p>
+    <p class="projectpage-toptext">This project began from an interest in working with X86 Linux systems to build my system administration skills. Due to hardware price increases from AI datacenter applications and other political pressure, building my own ATX system was off the table. I turned to my high school laptop, an Acer Travelmate P, to transform into a non-destructive (would be able to put back together as a laptop) headless 1U rack-mountable server.</p>
+    <p class="projectpage-toptext">This has also given me a reason to build my CAD skills designing a fully custom case for the motherboard and drive bays. A major challenge was getting the BIOS on the laptop motherboard, which is designed for school system administration and is relatively limited in its capabilities to play nicely with full 3.5" enterprise HDDs. This led me to my change to the Elitedesk </p>
 
     <h1 class="project-contentheader">ELITEDESK</h1>
-    <p> TODO: Add description describing why i switched to the elitedesk instead of sticking with the headless server</p>
+    <p>While it was a fun experiment to pack a laptop into a rack-mountable chassis, this introduced major issues. While I had designed a buck coverter for power delivery to the HDDs, and had looked into flashing a custom bios, both of these had complications.
+        The power supply simulated well, but the liability of a custom power supply and PCBA costs made this more complex than I would have liked. Flashing a custom BIOS can be incredibly risky, and to avoid all this I decided to switch to an SFF system.</p>
+    <p>The Elitedesk was cost effective, modular, and standard enough to easily accept cheap used enterprise PC parts. This allowed me to use standard hard drives, fans, and managment. This also allowed later PCIE expansion. I decided on Debian for this 
+        as it supports enterprise parts well without as much manual configuration. I settled on a mirroring array of two 2TB HDDs with mdadm, for a total storage capacity of 2TB.</p>
     <!--<h1 class="project-contentheader">BILL OF MATERIALS</h1>
     <div class="inline-projectcontentfull">
         <div class="componenttable">
