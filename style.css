@@ -23,22 +23,22 @@
 
     --footer-background: #111111;
     */
-    --primary: #ff7070;
-    --primary-muted: #af4b4b;
-    --primaryDark: #461e1e;
+    --primary: #70cbff;
+    --primary-muted: #4b91af;
+    --primaryDark: #1e2746;
     --bg: #000000;
-    --fg: #2b0000;
+    --fg: #242525;
     --text-main: #ffffff;
     --text-sub: #aaaaaa;
     --text-muted: #666666;
     --text-lightbackground: #000000;
 
-    --body-background: linear-gradient(0deg,rgba(0, 0, 0, 1) 62%, rgb(31, 15, 15) 100%);
-    --header-background: linear-gradient(145deg,rgba(0, 0, 0, 1) 0%, rgb(52, 25, 25) 50%);
-    --card-background: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgb(59, 0, 0) 100%);
-    --card-background-hover: linear-gradient(315deg,rgba(0, 0, 0, 1) 0%, rgb(59, 0, 0) 40%);
-    --card-image: linear-gradient(45deg, rgba(80, 0, 0, 0.068), rgba(255, 112, 112, 0.2));
-    --dark-img: linear-gradient(180deg, rgba(255, 0, 0, 0.068), rgba(0, 0, 0, 0.867));
+    --body-background: #131313;
+    --header-background: #222222;
+    --card-background: #181818;
+    --card-background-hover: #222222;
+    --card-image: linear-gradient(45deg, rgba(24, 0, 80, 0.068), rgba(133, 112, 255, 0.2));
+    --dark-img: linear-gradient(180deg, rgba(30, 0, 255, 0.068), rgba(0, 0, 0, 0.867));
 
     --footer-background: #111111;
 }
@@ -93,7 +93,6 @@ ul li a:hover {
 }
 
 .home {
-    font-family: 'Orbitron', sans-serif;
     background-color: var(--primary);
     color: var(--text-lightbackground);
     font-weight: 900;
@@ -211,9 +210,8 @@ hr {
 
 .project-card {
     background: var(--card-background);
-    border: 5px solid var(--primaryDark);
+    border: 5px solid var(--fg);
     overflow: hidden;
-    transition: transform 0.2s ease, border-color 0.2s ease;
 
     display: flex;
     flex-direction: column;
@@ -221,7 +219,6 @@ hr {
 
 .project-card:hover {
     background: var(--card-background-hover);
-    transform: translateY(-5px);
     border-color: var(--primary);
 }   
 
@@ -234,7 +231,7 @@ hr {
     top: 0 px;
     right: 00px;
 
-    background-color: var(--primaryDark);
+    background-color: var(--fg);
     color: var(--text-main);
     padding: 4px 8px;
     font-size: 1rem;
@@ -243,8 +240,6 @@ hr {
     border-radius: 0 0 0 8px;
 
     z-index: 2;
-
-    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .card-image {
@@ -284,7 +279,7 @@ hr {
 .card-content h3 {
     margin-top: 0;
     margin-bottom: 0;
-    color: var(--primary);
+    color: var(--text-main);
 }
 
 .tags {
@@ -300,8 +295,7 @@ hr {
 }
 
 .tag {
-    background-color: var(--primaryDark);
-    color: var(--primary);
+    color: var(--text-sub);
     font-weight: 700;
     padding: 2px 10px;
     border-radius: 15px;
@@ -309,7 +303,7 @@ hr {
 }
 
 .cardbtn-small {
-    color: var(--primary);
+    color: var(--text-main);
     padding: 2px 10px;
     text-decoration: none;
     font-size: 1.5rem;
@@ -338,6 +332,29 @@ hr {
     grid-template-columns: 2.5fr 1fr;
     gap: 50px;
     align-items: top;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: auto 1fr; 
+    column-gap: 1rem;
+    row-gap: 0px; 
+    align-content: start;    
+    margin-top: 1rem;
+}
+
+.sidebar-button {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: var(--fg);
+    padding: 10px;
+    margin-bottom: 5px;
+    display: block;
+    text-align: left;
+}
+
+.sidebar-button:hover {
+    color: var(--primary);
 }
 
 .dropdown {
@@ -371,17 +388,17 @@ hr {
 }
 
 .feature-title {
-    color: var(--primary);
     font-weight: 900;
     text-align: left;
     margin-bottom: 0;
 }
 
 .feature-subheading {
+    color: var(--text-sub);
     text-align: left;
     margin-top: 0;
     padding-bottom: 15px;
-    border-bottom: 5px solid var(--primary);
+    border-bottom: 5px solid var(--text-muted);
 }
 
 .skills-caroselheader {
@@ -910,7 +927,7 @@ table {
 
 .gallery-card {
     background-color: var(--bg);
-    border: 3px solid var(--primaryDark); 
+    border: 3px solid var(--fg); 
     display: flex;
     flex-direction: column;
     transition: all 0.2s ease;
@@ -927,7 +944,6 @@ table {
     width: 100%;
     height: 220px;
     overflow: hidden;
-    border-bottom: 2px solid var(--primaryDark);
 }
 
 .gallery-img img {

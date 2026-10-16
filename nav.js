@@ -16,8 +16,6 @@ const navbarHTML = `
                 </div>
             </li>
             
-            <li><a href="${prefix}skills.html">SKILLS</a></li>
-            
             <li><a href="${prefix}background.html">BACKGROUND</a></li>
 
             <li class="push-right">
